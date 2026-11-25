@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Test</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 80px; }
+    #getal { font-size: 64px; color: #1f3864; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Random getal</h1>
+  <p id="getal">?</p>
+  <button onclick="nieuwGetal()">Genereer</button>
+
+  <script>
+    function nieuwGetal() {
+      const getal = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("getal").textContent = getal;
+      document.body.style.background = `hsl(${getal * 3.6}, 70%, 90%)`;
+    }
+  </script>
+</body>
+</html>
